@@ -1,0 +1,51 @@
+name: "Create OctoAcme Project Management Docs README"
+description: "Create a comprehensive README for OctoAcme Project Management Docs with links and process summary."
+title: "[Process Doc Update]: Create README for OctoAcme Project Management Docs"
+labels: ["documentation", "process improvement"]
+body:
+  - type: dropdown
+    id: process_doc
+    attributes:
+      label: "Which process document do you want to update?"
+      description: "This is a new document request."
+      options:
+        - "<new document>"
+    validations:
+      required: true
+
+  - type: textarea
+    id: content_summary
+    attributes:
+      label: "Summary of New Content"
+      description: "Briefly describe the new content or update you want to add."
+      value: "Create a comprehensive README.md for the OctoAcme Project Management Docs directory that serves as a central hub and navigation guide. The README should include:\n\n1. **Overview**: Brief introduction to OctoAcme's project management approach and philosophy\n2. **Document Index**: Links to all process documents in the docs/ folder\n3. **Process Summary**: High-level description of the project lifecycle (Initiation → Planning → Execution → Release → Retrospective)\n4. **Key Principles**: Summary of core PM principles used by OctoAcme\n5. **Navigation Guide**: Help new team members understand which doc to consult for specific needs"
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: "Why is this update needed?"
+      description: "Explain the reason for this addition."
+      value: "The OctoAcme project management docs are scattered across multiple files without a clear entry point. A comprehensive README will:\n\n- Improve discoverability of process documentation\n- Provide new team members with a quick orientation to the PM approach\n- Serve as the single source of truth for process documentation\n- Enable effective use in Copilot Spaces as a context document\n- Reduce onboarding time by centralizing knowledge"
+    validations:
+      required: true
+
+  - type: textarea
+    id: example_content
+    attributes:
+      label: "Suggested Content Structure"
+      description: "Proposed structure and links for the README"
+      value: "# OctoAcme Project Management Documentation\n\n## Overview\nOctoAcme follows a structured, iterative project management approach centered on customer value, clear ownership, and data-informed decisions. This documentation centralizes all process guidance for running projects across OctoAcme.\n\n## Project Management Process\nOctoAcme projects follow this lifecycle:\n\n1. **Initiation** - Define the problem, align stakeholders\n2. **Planning** - Break work into deliverable increments\n3. **Execution** - Build, test, review, iterate\n4. **Release** - Deploy and verify\n5. **Retrospective** - Capture learnings and improve\n\n## Core Principles\n- **Customer-first**: Prioritize customer value and usability\n- **Iterative delivery**: Deliver small, testable increments\n- **Clear ownership**: Named PM and Product Lead for every project\n- **Data-informed**: Measure impact and iterate based on evidence\n- **Psychological safety**: Encourage feedback and learning\n\n## Documentation Index\n\n### [Project Management Overview](./octoacme-project-management-overview.md)\nHigh-level introduction to roles, artifacts, lifecycle, and communication cadence.\n\n### [Project Initiation Guide](./octoacme-project-initiation.md)\nSteps to validate work, align stakeholders, and create a lightweight plan.\n\n### [Project Planning](./octoacme-project-planning.md)\nBreak work into shippable increments, manage risks, and create release plans.\n\n### [Execution & Tracking](./octoacme-execution-and-tracking.md)\nGuidance for day-to-day execution, team rhythm, quality standards, and metrics.\n\n### [Release & Deployment Guide](./octoacme-release-and-deployment.md)\nStandardized release procedures, deployment checklist, and rollback playbooks.\n\n### [Risk Management & Communication](./octoacme-risks-and-communication.md)\nRisk identification, escalation paths, and stakeholder communication templates.\n\n### [Retrospective & Continuous Improvement](./octoacme-retrospective-and-continuous-improvement.md)\nHow to run retrospectives and convert learnings into actionable improvements.\n\n### [Roles & Personas](./octoacme-roles-and-personas.md)\nDefinitions of key roles (Developers, Product Managers, Project Managers) and responsibilities.\n\n## Quick Navigation\n\n**New to OctoAcme?** Start with [Project Management Overview](./octoacme-project-management-overview.md)\n\n**Starting a new project?** Follow [Project Initiation Guide](./octoacme-project-initiation.md) → [Project Planning](./octoacme-project-planning.md)\n\n**In execution?** Reference [Execution & Tracking](./octoacme-execution-and-tracking.md) and [Risk Management & Communication](./octoacme-risks-and-communication.md)\n\n**Preparing to release?** Check [Release & Deployment Guide](./octoacme-release-and-deployment.md)\n\n**Project complete?** Run through [Retrospective & Continuous Improvement](./octoacme-retrospective-and-continuous-improvement.md)"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: acceptance_criteria
+    attributes:
+      label: "Acceptance Criteria"
+      description: "Check all that apply:"
+      options:
+        - label: "Content aligns with existing process docs"
+        - label: "Update improves clarity or closes a documented gap"
+        - label: "Proposed content has been reviewed with stakeholders (if needed)"
